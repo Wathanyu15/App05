@@ -1,11 +1,25 @@
-<ion-content>
+<ion-header [translucent]="true">
+<ion-toolbar color="head">
+    <ion-title>Project
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+
+<ion-content color="body">
   <ion-grid>
     <ion-col size="12" size-md="6" size-ld="4"
     *ngFor="let i of items">
-      <ion-card>
-        <img [src]="i.imageURl" alt="">
+      <ion-card color="success" (click)="gotoDetail(i)">
+        <img [src]="i.imageURL" alt="">
         <ion-card-header>
-          <ion-card-title>
+          <ion-card-title >
             {{ i.name }}
           </ion-card-title>
         </ion-card-header>
